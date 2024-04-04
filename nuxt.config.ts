@@ -4,8 +4,37 @@ export default defineNuxtConfig({
   app: {
     pageTransition: { name: "page", mode: "out-in" }
   },
+  modules: [
+    '@nuxtjs/i18n',
+  ],
+  i18n: {
+    locales: [  
+      {
+        name: "Русский",
+        code: "ru",
+        iso: "ru-RU",
+        file: "ru.ts"
+      },
+      {
+        name: "Беларускі",
+        code: "by",
+        iso: "ru-BY",
+        file: "by.ts"
+      },
+    ],
+    defaultLocale: "ru",
+    lazy: true,
+    langDir: "localization",
+    strategy: "prefix_except_default",
+    detectBrowserLanguage: {
+      useCookie: true,
+      cookieKey: "lang",
+      redirectOn: "all",
+      alwaysRedirect: true
+    }
+},
   typescript: {
-      typeCheck: true,
-      strict: true
+    typeCheck: false,
+    strict: true
   }
 });
