@@ -4,9 +4,7 @@ export default defineNuxtConfig({
   app: {
     pageTransition: { name: "page", mode: "out-in" }
   },
-  modules: [
-    '@nuxtjs/i18n',
-  ],
+  modules: ['@nuxtjs/i18n', "@nuxt/image"],
   i18n: {
     locales: [  
       {
