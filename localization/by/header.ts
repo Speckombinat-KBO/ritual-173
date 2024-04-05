@@ -5,5 +5,5 @@ export default () => {
         "Links": {
             "Home": "",
         }
-    }
-}
+    };
+};
