@@ -17,7 +17,7 @@ export interface ILink {
 };
 
 const getLinks = () => {
-  const ret: Array<ILink> = [
+  const links: Array<ILink> = [
     {
       locale: t("Header.Links.Home"),
       name: "index",
@@ -39,18 +39,39 @@ const getLinks = () => {
       link: "/contacts",
     },
   ];
-  return ret;
+  return links;
+};
+const getAboutLinks = () => {
+  const links: Array<ILink> = [
+    {
+      locale: t("Header.Links.Home"),
+      name: "index",
+      link: "/",
+    },
+    {
+      locale: t("Header.Links.About"),
+      name: "about",
+      link: "/blocks",
+    },
+    {
+      locale: t("Header.Links.Shop"),
+      name: "shop",
+      link: "/shop",
+    },
+    {
+      locale: t("Header.Links.Contacts"),
+      name: "contacts",
+      link: "/contacts",
+    },
+  ];
+  return links;
 };
 </script>
 
 <template>
   <header>
     <div class="header-full">
-      <div class="header-top">
-        <NuxtImg src="/logo.png" :alt="t('Header.Title')"> </NuxtImg>
-      </div>
-      <div class="header-bottom">
-      </div>
+      <NuxtImg src="/logo.png" :alt="t('Header.Title')"> </NuxtImg>
     </div>
   </header>
 </template>
