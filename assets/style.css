@@ -9,9 +9,9 @@
 body {
   margin: 0;
   padding: 0;
-  color: aliceblue;
   min-height: 100dvh;
   box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 ul {
@@ -21,4 +21,10 @@ ul,
 li {
   margin: 0;
   padding: 0;
+}
+
+[class*=".container"] {
+  max-width: 1200px;
+  margin: 0px auto;
+  padding: 0px 15px;
 }

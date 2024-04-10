@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import type { LocaleObject } from "@nuxtjs/i18n"
-import type header from "~/localization/by/header"
+import type header from "~/localization/ru/header"
 
 const { t, locales, locale, fallbackLocale } = useI18n()
 const switchLocalePath = useSwitchLocalePath()
@@ -75,6 +75,7 @@ const getAboutLinks = () => {
   <header>
     <div class="header-full">
       <NuxtImg src="/logo.png" :alt="t('Header.Title')"> </NuxtImg>
+      {{ t("Header.Title") }}
     </div>
   </header>
 </template>
