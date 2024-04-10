@@ -1,10 +1,11 @@
+import Header from "./by/header"
+import Footer from "./by/footer"
+import Home from "./by/home"
+
 export default defineI18nLocale(async (locale) => {
-    return {
-      Core: Core(),
-      Meta: Meta(),
-      Errors: Errors(),
-      Header: Header(),
-      Footer: Footer(),
-      Home: Home(),
-    }
-  });
+  return {
+    Header: Header(),
+    Footer: Footer(),
+    Home: Home(),
+  }
+})

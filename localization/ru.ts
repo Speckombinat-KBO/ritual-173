@@ -1,10 +1,13 @@
+import Header from "./ru/Header/header"
+import HAbout from "./ru/Header/habout"
+import Footer from "./ru/footer"
+import Home from "./ru/home"
+
 export default defineI18nLocale(async (locale) => {
-    return {
-      Core: Core(),
-      Meta: Meta(),
-      Errors: Errors(),
-      Header: Header(),
-      Footer: Footer(),
-      Home: Home(),
-    }
-  });
+  return {
+    Header: Header(),
+    HAbout: HAbout(),
+    Footer: Footer(),
+    Home: Home(),
+  }
+})

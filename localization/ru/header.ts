@@ -1,9 +1,9 @@
 export default () => {
-    return {
-        "Title": "",
-        "OpenMenu": "Открыть меню",
-        "Links": {
-            "Home": "Главная",
-        }
-    }
+  return {
+    Title: "",
+    OpenMenu: "Открыть меню",
+    Links: {
+      Home: "Главная",
+    },
+  }
 }

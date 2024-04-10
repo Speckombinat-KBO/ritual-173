@@ -9,6 +9,7 @@
 body {
   margin: 0;
   padding: 0;
+  color: aliceblue;
   min-height: 100dvh;
   box-sizing: border-box;
 }
