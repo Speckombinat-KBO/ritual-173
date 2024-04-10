@@ -30,7 +30,7 @@
 <script setup lang="ts">
 import { ref } from "vue"
 
-const { rt, tm, locales, locale, fallbackLocale } = useI18n()
+const { tm } = useI18n()
 const graveyards = tm("Graveyard.graveyards")
 
 const items = ref(graveyards)

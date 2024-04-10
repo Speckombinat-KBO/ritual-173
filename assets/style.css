@@ -13,7 +13,9 @@ body {
   box-sizing: border-box;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
-
+a {
+  text-decoration: none;
+}
 ul {
   list-style: none;
 }
@@ -23,8 +25,26 @@ li {
   padding: 0;
 }
 
+.wrapper {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+footer {
+  margin-top: auto;
+}
+
 [class*=".container"] {
-  max-width: 1200px;
+  max-width: 1240px;
   margin: 0px auto;
-  padding: 0px 15px;
+  padding: 0px 20px;
+}
+
+/* TABLET */
+@media (max-width: 991.98px) {
+  [class*="__container"] {
+    max-width: 750px;
+  }
 }

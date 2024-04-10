@@ -47,10 +47,12 @@ useHead(meta)
 
 <template>
   <NuxtLayout>
-    <AppHeader />
-    <main>
-      <NuxtPage />
-    </main>
-    <AppFooter />
+    <div class="wrapper">
+      <AppHeader />
+      <main>
+        <NuxtPage />
+      </main>
+      <AppFooter />
+    </div>
   </NuxtLayout>
 </template>
