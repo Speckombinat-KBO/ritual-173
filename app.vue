@@ -56,3 +56,9 @@ useHead(meta)
     </div>
   </NuxtLayout>
 </template>
+
+<style scoped>
+main {
+  background-color: #fafcff;
+}
+</style>

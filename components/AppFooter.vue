@@ -115,12 +115,12 @@ const getContacts = () => {
     {
       locale: t("Footer.Contacts.Email"),
       src: "/icons/email.svg",
-      link: `mailto:speckombinat@ritual-minsk.by`,
+      link: "mailto:speckombinat@ritual-minsk.by",
     },
     {
       locale: t("Footer.Contacts.Address"),
       src: "/icons/map-pin.svg",
-      link: `https://yandex.by/profile/135085402853`,
+      link: "https://yandex.by/profile/135085402853",
     },
   ]
   return links

@@ -4,6 +4,7 @@ import HAbout from "./ru/Header/habout"
 import Footer from "./ru/footer"
 import Home from "./ru/home"
 import Banner from "./ru/banner"
+import Staff from "./ru/staff"
 
 export default defineI18nLocale(async (locale) => {
   return {
@@ -13,5 +14,6 @@ export default defineI18nLocale(async (locale) => {
     Home: Home(),
     Graveyard: Graveyard(),
     Banner: Banner(),
+    Staff: Staff(),
   }
 })
