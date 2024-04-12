@@ -1,9 +1,28 @@
 export default () => {
   return {
-    Title: "",
-    OpenMenu: "Открыть меню",
-    Links: {
-      Home: "Главная",
+    Home: {
+      Name: "Главная",
+    },
+    About: {
+      Name: "О нас",
+      Links: {
+        Managment: "О руководстве",
+        History: "История предприятия",
+        Structure: "Структура предприятия",
+        Vacancies: "Вакансии",
+      },
+    },
+    Tribulation: {
+      Name: "Если случилась беда",
+    },
+    Shop: {
+      Name: "Магазин",
+    },
+    Contacts: {
+      Name: "Контакты",
+    },
+    News: {
+      Name: "Новости",
     },
   }
 }

@@ -75,7 +75,7 @@ const getAboutLinks = () => {
   <header>
     <div class="header-full">
       <NuxtImg src="/logo.png" :alt="t('Header.Title')"> </NuxtImg>
-      {{ t("Header.Title") }}
+      {{ t("SiteInfo.Title") }}
     </div>
   </header>
 </template>

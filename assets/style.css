@@ -13,6 +13,10 @@ body {
   box-sizing: border-box;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
+h1,
+p {
+  margin: 0;
+}
 a {
   text-decoration: none;
 }

@@ -1,16 +1,18 @@
 <template>
-  <section class="staff-section .container">
-    <h1>Контакты предприятия</h1>
-    <div class="staff-grid">
-      <StaffCard
-        v-for="person in staff"
-        :key="person.name"
-        :staffImage="person.image"
-        :staffPosition="person.position"
-        :staffName="person.name"
-        :appointmentTitle="person.appointmentTime"
-        :appointmentTime="person.appointmentDay"
-      />
+  <section class=".container">
+    <div class="staff-section">
+      <h1>Контакты предприятия</h1>
+      <div class="staff-grid">
+        <StaffCard
+          v-for="person in staff"
+          :key="person.name"
+          :staffImage="person.image"
+          :staffPosition="person.position"
+          :staffName="person.name"
+          :appointmentTitle="person.appointmentTime"
+          :appointmentTime="person.appointmentDay"
+        />
+      </div>
     </div>
   </section>
 </template>
@@ -22,6 +24,12 @@ const staff = tm("Staff.staff")
 </script>
 
 <style scoped>
+.staff-section {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0px 0px 0px;
+}
+
 .staff-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
