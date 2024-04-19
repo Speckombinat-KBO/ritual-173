@@ -6,7 +6,7 @@ export default () => {
     About: {
       Name: "О нас",
       Links: {
-        Managment: "О руководстве",
+        Contacts: "Контакты руководителей",
         History: "История предприятия",
         Structure: "Структура предприятия",
         Vacancies: "Вакансии",

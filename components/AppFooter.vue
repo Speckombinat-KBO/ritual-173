@@ -154,7 +154,7 @@ const getPhones = () => {
 <style scoped>
 footer {
   background-color: #0065b1;
-  padding: 20px 0px 50px 0px;
+  padding: 20px 0px 20px 0px;
 }
 
 .footer-top-row {
@@ -174,7 +174,7 @@ footer {
   flex-wrap: wrap;
   column-gap: 1.5rem;
   row-gap: 0.5rem;
-  margin: 20px 0px 20px 0px;
+  margin: 20px 0px 0px 0px;
 }
 
 .footer-banners-row img {

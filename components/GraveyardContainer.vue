@@ -1,28 +1,39 @@
 <template>
-  <div class="graveyards">
-    <div class="list-container">
-      <ul>
-        <li
-          class="list-item"
-          v-for="(item, index) in tm('Graveyard.graveyards')"
-          :key="item"
-          @click="selectItem(item, index)"
-          :class="{
-            active: selectedItem === item || (!selected && index === 0),
-          }"
-        >
-          {{ item.title }}
-        </li>
-      </ul>
-    </div>
-    <div class="graveyard-thumbnail-container">
-      <NuxtLink to="https://en.wikipedia.org/wiki/Great_Teacher_Onizuka">
-        <NuxtImg
-          class="graveyard-thumbnail"
-          :src="selectedItem.image"
-          alt="Graveyard thumbnail"
-        ></NuxtImg>
-      </NuxtLink>
+  <div>
+    <h2 class="title">{{ t("Graveyard.title") }}</h2>
+    <div class="graveyards">
+      <div class="list-container">
+        <ul>
+          <li
+            class="list-item"
+            v-for="(item, index) in tm('Graveyard.graveyards')"
+            :key="item"
+            @click="selectItem(item, index)"
+            :class="{
+              active: selectedItem === item || (!selected && index === 0),
+            }"
+          >
+            <NuxtLink
+              :to="item.link"
+              class="item-link"
+              :class="{
+                active: selectedItem === item || (!selected && index === 0),
+              }"
+              >{{ item.title }}</NuxtLink
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="graveyard-thumbnail-container">
+        <NuxtLink class="graveyard-link" :to="selectedItem.link">
+          <NuxtImg
+            class="graveyard-thumbnail"
+            :src="selectedItem.image"
+            alt="Graveyard thumbnail"
+          />
+          <div class="goto-graveyard">Перейти</div>
+        </NuxtLink>
+      </div>
     </div>
   </div>
 </template>
@@ -30,7 +41,7 @@
 <script setup lang="ts">
 import { ref } from "vue"
 
-const { tm } = useI18n()
+const { t, tm } = useI18n()
 const graveyards = tm("Graveyard.graveyards")
 
 const items = ref(graveyards)
@@ -44,14 +55,19 @@ const selectItem = (item, index) => {
 </script>
 
 <style scoped>
+.title {
+  margin-bottom: 20px;
+}
+
 .graveyards {
   display: flex;
   max-width: 100%;
   max-height: 300px;
-  border: 1px solid #000000;
+  border: 2px solid #0065b1;
   border-radius: 0.75rem;
   padding: 15px;
-  background-color: #ededed;
+  background-color: #e5ecfe;
+  margin-bottom: 20px;
 }
 
 .list-container {
@@ -74,12 +90,21 @@ const selectItem = (item, index) => {
 }
 
 .list-item:hover {
-  background-color: #d4d4d4;
+  background-color: #fafcff;
 }
 
 .list-item.active {
-  background-color: #d4d4d4;
-  color: #0784c3;
+  background-color: #fafcff;
+  color: #0065b1;
+}
+
+.item-link {
+  color: #212529;
+}
+
+.item-link.active {
+  background-color: #fafcff;
+  color: #0065b1;
 }
 
 .graveyard-thumbnail-container {
@@ -96,5 +121,35 @@ const selectItem = (item, index) => {
   height: 270px;
   object-fit: cover;
   border-radius: 0.5rem;
+}
+
+.graveyard-link {
+  position: relative;
+}
+
+.goto-graveyard {
+  position: absolute;
+  left: 0;
+  bottom: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  height: 40px;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  border-radius: 0 0 0.5rem 0.5rem;
+  font-size: 14px;
+}
+
+.goto-graveyard:hover {
+  text-decoration: underline;
+}
+
+/* MOBILE */
+@media (max-width: 767.98px) {
+  .graveyard-thumbnail-container {
+    display: none;
+  }
 }
 </style>

@@ -57,8 +57,9 @@ useHead(meta)
   </NuxtLayout>
 </template>
 
-<style scoped>
+<style>
 main {
   background-color: #fafcff;
+  flex: 1;
 }
 </style>

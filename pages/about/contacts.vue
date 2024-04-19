@@ -1,7 +1,7 @@
 <template>
   <section class=".container">
     <div class="staff-section">
-      <h1>Контакты предприятия</h1>
+      <h1>Контакты руководителей</h1>
       <div class="staff-grid">
         <StaffCard
           v-for="person in staff"
@@ -42,6 +42,14 @@ const staff = tm("Staff.staff")
 @media (max-width: 991.98px) {
   .staff-grid {
     grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+/* MOBILE */
+@media (max-width: 767.98px) {
+  .staff-grid {
+    display: flex;
+    flex-direction: column;
   }
 }
 </style>

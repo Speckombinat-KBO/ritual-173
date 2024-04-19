@@ -35,12 +35,16 @@ button {
 }
 
 .btn-primary {
-  background-color: #f87171;
+  background-color: #ef4444;
   color: #0f172a;
 }
 
 .btn-primary:hover {
-  background-color: #ef4444;
+  opacity: 0.9;
+}
+
+.btn-primary:active {
+  opacity: 0.7;
 }
 
 .btn-outlined {

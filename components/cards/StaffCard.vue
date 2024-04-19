@@ -87,4 +87,18 @@ export default {
 .card-subtitle {
   margin: 0;
 }
+
+/* MOBILE */
+@media (max-width: 767.98px) {
+  .picture-wrapper {
+    display: flex;
+  }
+
+  .staff-picture {
+    width: 100%;
+    height: 100%;
+    border-radius: 0.5rem;
+    object-fit: cover;
+  }
+}
 </style>
