@@ -2,6 +2,7 @@
 import "@/assets/style.css"
 const { t } = useI18n()
 const i18nHead = useLocaleHead({})
+
 const meta = computed(() => {
   return {
     meta: [
@@ -44,7 +45,6 @@ const meta = computed(() => {
 
 useHead(meta)
 </script>
-
 <template>
   <NuxtLayout>
     <div class="wrapper">
@@ -55,6 +55,7 @@ useHead(meta)
       <AppFooter />
     </div>
   </NuxtLayout>
+
 </template>
 
 <style>

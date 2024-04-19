@@ -1,4 +1,5 @@
 <script setup lang="ts">
+
 import type { LocaleObject } from "@nuxtjs/i18n"
 import type header from "~/localization/ru/header"
 import { ref } from "vue"
