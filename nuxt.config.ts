@@ -2,22 +2,22 @@
 export default defineNuxtConfig({
   devtools: { enabled: false },
   app: {
-    pageTransition: { name: "page", mode: "out-in" }
+    pageTransition: { name: "page", mode: "out-in" },
   },
-  modules: ['@nuxtjs/i18n', "@nuxt/image"],
+  modules: ["@nuxtjs/i18n", "@nuxt/image"],
   i18n: {
-    locales: [  
+    locales: [
       {
         name: "Русский",
         code: "ru",
         iso: "ru-RU",
-        file: "ru.ts"
+        file: "ru.ts",
       },
       {
         name: "Беларускі",
         code: "by",
         iso: "ru-BY",
-        file: "by.ts"
+        file: "by.ts",
       },
     ],
     defaultLocale: "ru",
@@ -28,11 +28,11 @@ export default defineNuxtConfig({
       useCookie: true,
       cookieKey: "lang",
       redirectOn: "all",
-      alwaysRedirect: true
-    }
-},
+      alwaysRedirect: true,
+    },
+  },
   typescript: {
     typeCheck: false,
-    strict: true
-  }
-});
+    strict: true,
+  },
+})

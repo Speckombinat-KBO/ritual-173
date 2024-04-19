@@ -1,9 +1,9 @@
 export default () => {
-    return {
-        "Title": "",
-        "OpenMenu": "",
-        "Links": {
-            "Home": "",
-        }
-    };
-};
+  return {
+    Title: "",
+    OpenMenu: "",
+    Links: {
+      Home: "",
+    },
+  }
+}

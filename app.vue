@@ -1,7 +1,8 @@
 <script setup lang="ts">
-import "@/assets/style.css";
-const { t } = useI18n();
-const i18nHead = useLocaleHead({});
+import "@/assets/style.css"
+const { t } = useI18n()
+const i18nHead = useLocaleHead({})
+
 const meta = computed(() => {
   return {
     meta: [
@@ -37,15 +38,29 @@ const meta = computed(() => {
       ...(i18nHead.value.link || []),
     ],
     htmlAttrs: {
-      lang: i18nHead.value.htmlAttrs!.lang
-    }
-  };
-});
+      lang: i18nHead.value.htmlAttrs!.lang,
+    },
+  }
+})
 
-useHead(meta);
+useHead(meta)
 </script>
 <template>
-  <div>
-    <AppHeader />
-  </div>
+  <NuxtLayout>
+    <div class="wrapper">
+      <AppHeader />
+      <main>
+        <NuxtPage />
+      </main>
+      <AppFooter />
+    </div>
+  </NuxtLayout>
+
 </template>
+
+<style>
+main {
+  background-color: #fafcff;
+  flex: 1;
+}
+</style>
